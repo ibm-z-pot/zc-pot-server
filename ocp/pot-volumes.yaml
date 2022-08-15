@@ -1,0 +1,23 @@
+spec:
+  template:
+    spec:
+      containers:
+      - name: zc
+        volumeMounts:
+        - mountPath: "/opt/ibm/wlp/usr/servers/defaultServer/resources/security/zc-pot-server-truststore.p12"
+          name: zc-truststore
+          readOnly: true
+          subPath: zc-pot-server-truststore.p12
+        - mountPath: "/opt/ibm/wlp/usr/servers/defaultServer/resources/security/zc-pot-server.p12"
+          name: zc-keystore
+          readOnly: true
+          subPath: zc-pot-server.p12
+      volumes:
+      - name: zc-truststore
+        secret:
+          defaultMode: 420
+          secretName: zc-truststore
+      - name: zc-keystore
+        secret:
+          defaultMode: 420
+          secretName: zc-keystore

@@ -1,0 +1,18 @@
+kind: ZosConnect
+apiVersion: zosconnect.zcon.ibm.com/v1
+metadata:
+  name: zc
+spec:
+  deployment:
+    containerPort: 9443
+    image: 'icr.io/zpot/zc-pot-api:potNN'
+    pullPolicy: IfNotPresent
+    replicas: 0
+  license:
+    accept: true
+  service:
+    port: 9443
+    targetPort: 9443
+    type: ClusterIP
+  systemStatus: betterThanYesterday
+  version: v1.0.2
