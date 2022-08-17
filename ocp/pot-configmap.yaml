@@ -3,10 +3,10 @@ kind: ConfigMap
 metadata:
   name: pot-config
 data:
-  BAQ_NETWORK: 'BAQCA'
-  BAQ_APPLID: 'BAQCA'
+  BAQ_NETWORK: 'BAQCB'
+  BAQ_APPLID: 'BAQCB'
   CICS_NAME: 'cicsConn'
-  CICS_HOST: '169.62.161.37'
-  CICS_PORT: '57027'
+  CICS_HOST: '10.242.64.200'
+  CICS_PORT: '57028'
   KEYSTORE: 'zc-pot-server.p12'
   TRUSTSTORE: 'zc-pot-server-truststore.p12'
