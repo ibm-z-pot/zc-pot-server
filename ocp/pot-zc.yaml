@@ -7,7 +7,7 @@ spec:
     containerPort: 9443
     image: 'icr.io/zpot/zc-pot-api:potNN'
     pullPolicy: IfNotPresent
-    replicas: 0
+    replicas: 1
   license:
     accept: true
   service:
