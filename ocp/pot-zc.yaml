@@ -14,5 +14,7 @@ spec:
     port: 9443
     targetPort: 9443
     type: ClusterIP
-  systemStatus: betterThanYesterday
-  version: v1.0.2
+  expose: true
+  route:
+    termination: passthrough
+  version: v1.0.6
